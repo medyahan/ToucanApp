@@ -52,6 +52,7 @@
             android:layout_height="wrap_content"
             android:background="@color/colorPrimaryButton"
             android:text="@string/hadibaslayalim"
+            android:onClick="skip"
             android:visibility="invisible"
             android:textColor="@color/white" />
 

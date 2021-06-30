@@ -60,6 +60,7 @@ public class OnBoarding extends AppCompatActivity {
 
         public void next(View view) {
             viewPager.setCurrentItem(currentPos + 1);
+
         }
 
         private void addDots(int position) {

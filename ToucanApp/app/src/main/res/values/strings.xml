@@ -21,13 +21,15 @@ yer keşfetme imkanına sahip ol.</string>
     <string name="title_activity_maps">Map</string>
 
     <!-- UserBoard -->
-    <string name="applogo">Tourist Can</string>
+    <string name="applogo">Gezmeye Ne Dersin?</string>
     <string name="arama">Arama...</string>
     <string name="yemek">Yeme - İçme</string>
     <string name="tarihiyer">Tarihi Yer</string>
     <string name="doga">Doğa</string>
     <string name="muze">Müze</string>
     <string name="otel">Otel</string>
+    <string name="yemekbutonslogani">SENİN İÇİN EN İYİ MEKANLAR</string>
+    <string name="yemekbutonsloganidesc">"   Senin için en iyi yemekleri, kendine bir mola vermek istediğinde bir bardak kahve içmek için en iyi kafeleri seçtik. Tüm bu mekanlar senin için en iyi yorumlara, yıldızlara bakarak sıralandı. Hadi gezgin! bir küçük molayı, acıktıysan en iyi yemekleri hakettin.   "</string>
 
 
 
