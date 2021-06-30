@@ -1,3 +1,94 @@
 <resources>
     <string name="app_name">TouCanApp</string>
+    <string name="appname">TouCan</string>
+
+    <string name="slogan1">Yeni Şeyler Keşfet</string>
+    <string name="slogan2">“Gezgin, bir yere varmak için değil,
+                            keşfetmek için seyahat eder.”</string>
+    <string name="slogan3">Seyahatini Planla</string>
+    <string name="slogan4">Gitmek ve görmek istediğin yerleri
+ajandana kaydederek az zamanda birçok
+yer keşfetme imkanına sahip ol.</string>
+    <string name="hadibaslayalim">Hadi Başlayalım</string>
+
+    <string name="todo">TODO</string>
+
+
+    <string name="skip_btn">Skip</string>
+    <string name="next_btn">Next</string>
+    <string name="let_get_started">Lets Get Started</string>
+
+    <string name="title_activity_maps">Map</string>
+
+    <!-- UserBoard -->
+    <string name="applogo">Tourist Can</string>
+    <string name="arama">Arama...</string>
+    <string name="yemek">Yeme - İçme</string>
+    <string name="tarihiyer">Tarihi Yer</string>
+    <string name="doga">Doğa</string>
+    <string name="muze">Müze</string>
+    <string name="otel">Otel</string>
+
+
+
+    <string-array name="canakkale_gezilecek_yerler">
+        <item>Çanakkale Şehitliği ve Şehitler Anıtı</item>
+        <item>Aynalı Çarşı</item>
+        <item>Truva(Troya) Antik Kenti</item>
+        <item>Truva Atı</item>
+        <item>Kilitbahir Kalesi</item>
+        <item>Conkbayırı</item>
+        <item>57. Piyade Alayı Şehitliği</item>
+        <item>Seyit Onbaşı Anıtı</item>
+        <item>Çanakkale Saat Kulesi</item>
+        <item>Çanakkale Kent Müzesi ve Arşivi</item>
+        <item>Çanakkale Seramik Müzesi</item>
+        <item>Rhapsodos Mozaik</item>
+        <item>Çanakkale Deniz Müzesi</item>
+        <item>1915 Seddülbahir Savaş Malzemeleri Müzesi</item>
+        <item>Kordon</item>
+        <item>Assos (Assos Antik Kenti)</item>
+        <item>Bozcaada</item>
+        <item>Gökçeada</item>
+        <item>Küçükkuyu</item>
+        <item>Adatepe</item>
+        <item>Güzelyalı Halk Plajı</item>
+        <item>Assos Sokakağzı Plajı</item>
+        <item>Bozcada Ayazma Plajı</item>
+        <item>Dardanos Plajı</item>
+        <item>Tavaklı Sahili</item>
+        <item>Çardak Kum Adası</item>
+        <item>Geyikli Plajı</item>
+        <item>Güneyli Sahili</item>
+        <item>Kefaloz(Aydıncık Plajı)</item>
+        <item>Tarihe Saygı Parkı</item>
+        <item>Özgürlük Parkı</item>
+        <item>Gizli Liman Koyu</item>
+        <item>Kocakum Koyu</item>
+        <item>Taşkapı Koyu</item>
+        <item>Akvaryum Koyu</item>
+        <item>Kadırga Koyu</item>
+        <item>Büyük Kemikli Burnu</item>
+        <item>Kömür Limanı</item>
+        <item>Atikhisar Barajı Kamp Alanı</item>
+        <item>Kazdağı Milli Parkı</item>
+        <item>Çanakkale Aqualand</item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+
+
+    </string-array>
 </resources>
