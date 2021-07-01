@@ -14,7 +14,11 @@
     <color name="soluk">#7CFF9800</color>
     <color name="kirmizis">#60FF5E5E</color>
     <color name="kirmizi">#CD6B6B</color>
+    <color name="red">#CD6B6B</color>
     <color name="grey2">#FFCFCFCF</color>
+    <color name="muzerenk">#B39BDC</color>
+    <color name="tarihirenk">#D9E34C</color>
+    <color name="otelrenk">#7AE39D</color>
 
 
 </resources>

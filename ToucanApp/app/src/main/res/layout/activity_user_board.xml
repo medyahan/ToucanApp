@@ -221,51 +221,240 @@
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:layout_marginLeft="20dp"
-                android:background="@color/kirmizi">
+                android:layout_height="300dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="20dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="280dp"
+                    android:layout_marginRight="220dp"
+                    android:background="@drawable/bgkirmizi"
+
+                    />
 
                 <LinearLayout
                     android:id="@+id/featured_background"
                     android:layout_width="170dp"
                     android:layout_height="280dp"
-                    android:background="@drawable/sardalyemekan"
-                    android:layout_margin="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+
                     android:orientation="vertical">
 
                     <TextView
                         android:layout_width="160dp"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10dp"
-                        android:layout_marginTop="50dp"
-                        android:background="#B0000000"
+                        android:layout_marginTop="30dp"
                         android:fontFamily="@font/poppins_bold"
                         android:text="@string/yemekbutonslogani"
                         android:textAllCaps="true"
-                        android:textColor="@color/grey2"
+                        android:textColor="@color/white"
                         android:textSize="20sp" />
 
                     <TextView
                         android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
+                        android:layout_height="160dp"
                         android:layout_marginLeft="10dp"
 
-                        android:background="#B0000000"
                         android:fontFamily="@font/poppins_light"
                         android:text="@string/yemekbutonsloganidesc"
                         android:textColor="@color/grey2"
-                        android:textSize="8sp" />
+                        android:textSize="11sp" />
 
                 </LinearLayout>
 
                 <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/featured_recycler"
                     android:layout_width="match_parent"
-                    android:layout_height="280dp"
+                    android:layout_height="3000dp"
                     android:layout_toRightOf="@id/featured_background"
-                    android:background="@color/white"/>
+                    android:background="#00000000" />
 
             </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="20dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="280dp"
+                    android:layout_marginRight="220dp"
+                    android:background="@drawable/bgmuzemor"
+
+                    />
+
+                <LinearLayout
+                    android:id="@+id/featured_background2"
+                    android:layout_width="170dp"
+                    android:layout_height="280dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="30dp"
+                        android:fontFamily="@font/poppins_bold"
+                        android:text="@string/muzebutonslogani"
+                        android:textAllCaps="true"
+                        android:textColor="@color/white"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="160dp"
+                        android:layout_marginLeft="10dp"
+
+                        android:fontFamily="@font/poppins_light"
+                        android:text="@string/yemekbutonsloganidesc"
+                        android:textColor="@color/grey2"
+                        android:textSize="11sp" />
+
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/featured_recycler2"
+                    android:layout_width="match_parent"
+                    android:layout_height="3000dp"
+                    android:layout_toRightOf="@id/featured_background2"
+                    android:background="#00000000" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="20dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="280dp"
+                    android:layout_marginRight="220dp"
+                    android:background="@drawable/bgtarihisari"
+
+                    />
+
+                <LinearLayout
+                    android:id="@+id/featured_background3"
+                    android:layout_width="170dp"
+                    android:layout_height="280dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="30dp"
+                        android:fontFamily="@font/poppins_bold"
+                        android:text="@string/tarihibutonslogani"
+                        android:textAllCaps="true"
+                        android:textColor="@color/white"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="160dp"
+                        android:layout_marginLeft="10dp"
+
+                        android:fontFamily="@font/poppins_light"
+                        android:text="@string/tarihibutonsloganidesc"
+                        android:textColor="@color/grey2"
+                        android:textSize="11sp" />
+
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/featured_recycler3"
+                    android:layout_width="match_parent"
+                    android:layout_height="3000dp"
+                    android:layout_toRightOf="@id/featured_background3"
+                    android:background="#00000000" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="20dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="280dp"
+                    android:layout_marginRight="220dp"
+                    android:background="@drawable/bgotelyesil"
+
+                    />
+
+                <LinearLayout
+                    android:id="@+id/featured_background4"
+                    android:layout_width="170dp"
+                    android:layout_height="280dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="30dp"
+                        android:fontFamily="@font/poppins_bold"
+                        android:text="@string/otelbutonslogani"
+                        android:textAllCaps="true"
+                        android:textColor="@color/white"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="160dp"
+                        android:layout_marginLeft="10dp"
+
+                        android:fontFamily="@font/poppins_light"
+                        android:text="@string/otelbutonsloganidesc"
+                        android:textColor="@color/grey2"
+                        android:textSize="11sp" />
+
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/featured_recycler4"
+                    android:layout_width="match_parent"
+                    android:layout_height="3000dp"
+                    android:layout_toRightOf="@id/featured_background4"
+                    android:background="#00000000" />
+
+            </RelativeLayout>
+
 
             <LinearLayout
                 android:layout_width="match_parent"
