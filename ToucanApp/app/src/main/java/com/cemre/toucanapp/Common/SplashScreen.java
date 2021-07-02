@@ -17,7 +17,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class SplashScreen extends AppCompatActivity {
 
-    private static int SPLASH_TIMER =3000;
+    private static int SPLASH_TIMER = 3000;
 
 
     ImageView imgView1;
@@ -43,14 +43,36 @@ public class SplashScreen extends AppCompatActivity {
         imgView1.setAnimation(side_animasyon);
         startekranslogan.setAnimation(bottom_animasyon);
 
+        new Handler().postDelayed(() -> {
+            onBoaringScreen = getSharedPreferences("onBoaringScreen", MODE_PRIVATE);
+            boolean isFirstTime = onBoaringScreen.getBoolean("firsTime", true);
+
+            if (isFirstTime) {
+
+                SharedPreferences.Editor editor = onBoaringScreen.edit();
+                editor.putBoolean("firstTime", false);
+                editor.commit();
+
+                Intent intent = new Intent(getApplicationContext(), OnBoarding.class);
+                startActivity(intent);
+                finish();
+            } else {
+                Intent intent = new Intent(getApplicationContext(), UserBoard.class);
+                startActivity(intent);
+                finish();
+            }
+
+
+        }, SPLASH_TIMER);
+/*
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
 
                 onBoaringScreen = getSharedPreferences("onBoaringScreen", MODE_PRIVATE);
-                boolean isFirstTime = onBoaringScreen.getBoolean("firsTime",true);
+                boolean isFirstTime = onBoaringScreen.getBoolean("firsTime", true);
 
-                if(isFirstTime){
+                if (isFirstTime) {
 
                     SharedPreferences.Editor editor = onBoaringScreen.edit();
                     editor.putBoolean("firstTime", false);
@@ -59,17 +81,16 @@ public class SplashScreen extends AppCompatActivity {
                     Intent intent = new Intent(getApplicationContext(), OnBoarding.class);
                     startActivity(intent);
                     finish();
-                } else{
+                } else {
                     Intent intent = new Intent(getApplicationContext(), UserBoard.class);
                     startActivity(intent);
                     finish();
                 }
 
 
-
             }
-        },SPLASH_TIMER);
+        }, SPLASH_TIMER);
 
-
+*/
     }
 }

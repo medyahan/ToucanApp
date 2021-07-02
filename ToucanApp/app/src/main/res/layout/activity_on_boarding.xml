@@ -50,11 +50,12 @@
             android:id="@+id/hadibaslayaslimBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/colorPrimaryButton"
+            android:background="@drawable/hadibaslayalim"
             android:text="@string/hadibaslayalim"
             android:onClick="skip"
+            app:backgroundTint="@null"
             android:visibility="invisible"
-            android:textColor="@color/white" />
+             />
 
         <Button
             android:id="@+id/nextBtn"
@@ -64,6 +65,7 @@
             android:layout_alignParentBottom="true"
             android:layout_marginRight="0dp"
             android:background="#00000000"
+            app:backgroundTint="@null"
             android:onClick="next"
             android:drawableEnd="@drawable/leftarrow"
             android:drawableRight="@drawable/leftarrow"

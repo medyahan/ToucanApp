@@ -29,13 +29,17 @@ yer keşfetme imkanına sahip ol.</string>
     <string name="muze">Müze</string>
     <string name="otel">Otel</string>
     <string name="yemekbutonslogani">SENİN İÇİN EN İYİ MEKANLAR</string>
-    <string name="yemekbutonsloganidesc">"    Senin için en iyi yemekleri, kendine bir mola vermek istediğinde bir bardak kahve içmek için en iyi kafeleri seçtik. Tüm bu mekanlar senin için en iyi yorumlara, yıldızlara bakarak sıralandı. Hadi gezgin! küçük bir molayı, acıktıysan en iyi yemekleri hakettin.   "</string>
+    <string name="yemekbutonsloganidesc">"    En iyi yemekleri ve kendine bir mola vermek istediğinde bir bardak kahve içmek için en iyi kafeleri seçtik. Tüm bu mekanlar senin için en iyi yorumlara, yıldızlara bakarak sıralandı. Hadi gezgin! molayı hakettin.   "</string>
     <string name="muzebutonslogani">İŞTE SANAT VE TARİH KOKUSU</string>
-    <string name="muzebutonsloganidesc">"    Sanatın kalbi müzelerde atar. Sanat, bilim eserleri, tarihi nesneler gibi bir çok değerli eşyaların sergilendiği mekanlardır. Sanat ürünlerinin doğal zenginlikleri burada sergilenerek insanların yaşamlarını kolaylaştırır. Hadi gezgin! Tarihe tekrar şahit olmak istiyorsan müzeleri gezelim.  "</string>
+    <string name="muzebutonsloganidesc">"    Sanatın kalbi müzelerde atar. Sanat, bilim eserleri, tarihi nesneler gibi bir çok değerli eşyaların sergilendiği mekanlardır. Hadi gezgin! Tarihe tekrar şahit olmak istiyorsan müzeleri gezelim.  "</string>
     <string name="tarihibutonslogani">KENTİN TARİHİ YOLCULUĞUNA ÇIKMA VAKTİ</string>
     <string name="tarihibutonsloganidesc">"    Çanakkale’nin tarihi 5.000 yıl öncesine kadar yani MÖ 3000’li yıllara kadar uzanmaktadır. Bu tarihe bir adımda sen at. Hadi gezgin! tarihe koşalım.   "</string>
     <string name="otelbutonslogani">DİNLENMEYE NE DERSİN?</string>
     <string name="otelbutonsloganidesc">"    Dinlenmeyi en çok sen hakettin. Yeni yerler keşfetmek seni asla yoramaz. Hadi gezgin! en güzel otelleri burada bulabilirsin.   "</string>
+    <string name="ajanda">"AJANDA"</string>
+
+    <string name="anasayfa">"Anasayfa"</string>
+
 
 
     <string-array name="canakkale_gezilecek_yerler">

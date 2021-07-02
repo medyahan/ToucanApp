@@ -39,7 +39,78 @@ public class UserBoard extends AppCompatActivity {
         //categoriesRecycler();
 
     }
-/*
+
+    private void featuredRecycler() {
+
+
+        ///MEKAN VERİLERİ
+        featuredRecycler.setHasFixedSize(true);
+        featuredRecycler.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
+
+        ArrayList<FeaturedHelperClass> featuredLocationsMekan = new ArrayList<>();
+
+        featuredLocationsMekan.add(new FeaturedHelperClass(R.drawable.sardalyemekan, "Sardalye", "Ekmek arası sardalya dedin mi adres belli. Yanında acılı turşu suyu ile Çanakkale'ye her yolu düşenin tatması gereken bir lezzet."));
+        featuredLocationsMekan.add(new FeaturedHelperClass(R.drawable.doganpastamekan, "Doğan Pastanesi", "Dondurmaya adini veren, birbirinden güzel pasta ve tatlı çeşitleriyle damağınızda unutulmaz tatlar bırakıyor."));
+        featuredLocationsMekan.add(new FeaturedHelperClass(R.drawable.burgermekan, "Altı Üstü Burger", "Günlük hazırlanan zerdeçallı ekmeği ve köftesiyle şehrin en lezzetli hamburgerleri..."));
+        featuredLocationsMekan.add(new FeaturedHelperClass(R.drawable.oncumekan, "Öncü Döner", "Et İskenderden, Tavuk Dönere uzanan çeşitlerle etin en lezzetli versiyonlarının bulunduğu mekandır."));
+        featuredLocationsMekan.add(new FeaturedHelperClass(R.drawable.yalovarestoranimekan, "Yalova Restaurant", "Çanakkale'de en iyi balık yapan restoran. Mezeleri , çorbası ve  manzarası ile  her zaman tercih sebebidir."));
+        featuredLocationsMekan.add(new FeaturedHelperClass(R.drawable.verandamekan, "Veranda Cafe", "Dünya kahveleri, sandviçler, özel el yapımı cheesecake ve pastalarla hizmetinizde."));
+
+        adapter = new FeaturedAdapter(featuredLocationsMekan);
+        featuredRecycler.setAdapter(adapter);
+
+        ///MÜZE VERİLERİ
+        featuredRecycler2.setHasFixedSize(true);
+        featuredRecycler2.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
+
+        ArrayList<FeaturedHelperClass> featuredLocationsMuze = new ArrayList<>();
+
+        featuredLocationsMuze.add(new FeaturedHelperClass(R.drawable.troyamuzesi, "Troya Müzesi", "Troya antik kentini anlamak ve ören yeri gezisini de anlamlandırmak için mükemmel bir mekan."));
+        featuredLocationsMuze.add(new FeaturedHelperClass(R.drawable.kentmuzesi, "Kent Müzesi", "Şehrin tarihçesi ve sosyal yaşamı anlatılan, bağışlanan eşyaların da sunulduğu müze."));
+        featuredLocationsMuze.add(new FeaturedHelperClass(R.drawable.denizmuzesi, "Deniz Müzesi", "1915 Çanakkale Deniz ve Kara Savaşları hakkında bilgilendirmek için kurulmuş askeri müze."));
+        featuredLocationsMuze.add(new FeaturedHelperClass(R.drawable.rhapdosmozaikmuze, "Rhapdos Mozaik", "Mozaik betimlemeleri üzerinden Troya mitoliji'sinin baştan sona anlatıldığı, Troya harabelerini görmeden önce mutlaka görülmesi gereken bir yer."));
+
+        adapter2 = new FeaturedAdapter(featuredLocationsMuze);
+        featuredRecycler2.setAdapter(adapter2);
+
+        ///TARİHİ YERLER VERİLERİ
+        featuredRecycler3.setHasFixedSize(true);
+        featuredRecycler3.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
+
+        ArrayList<FeaturedHelperClass> featuredLocationsTarihiYer = new ArrayList<>();
+
+        featuredLocationsTarihiYer.add(new FeaturedHelperClass(R.drawable.sehitlikabidesi, "Şehitler Abidesi", "Çanakkale Şehitleri Abidesi, kurtuluş mücadelesini en iyi hissedebileceğiniz, bu ülke uğruna ne kadar büyük fedakarlıklar yapıldığını anlayabileceğiniz en özel yerdir. "));
+        featuredLocationsTarihiYer.add(new FeaturedHelperClass(R.drawable.saatkulesi, "Saat Kulesi", "20 metrelik yükseklikte ve 5 katlı olan Çanakkale Saat Kulesi, Çanakkale şehir merkezinde Vitalis G. Sancakbeyi Cemil Paşa tarafından 1896 yılında yaptırılmıştır."));
+        featuredLocationsTarihiYer.add(new FeaturedHelperClass(R.drawable.truvaati, "Truva Atı", " Burası, Çanakkale’nin tarihi açıdan en zengin noktaları arasında bulunuyor ve ziyaretçilerin en fazla ilgi gösterdiği noktaların başında geliyor."));
+        featuredLocationsTarihiYer.add(new FeaturedHelperClass(R.drawable.aynalicarsi, "Aynalı Çarşı", "Aynalı Çarşı isminin çatıdaki pencerelerden giren ışığı dağıtmak için girişte ve duvar boyunca yerleştirilmiş aynalardan geldiğini düşünülmektedir."));
+        featuredLocationsTarihiYer.add(new FeaturedHelperClass(R.drawable.oncumekan, "Assos Antik Kenti", "Bölgede çıkarılan tarihi eserler arasında Athena Tapınağı burasını en cazip kılan detaylar arasında bulunuyor ve Assos tarihi yerler listesinin ilk sırasında yer almaktadır."));
+        featuredLocationsTarihiYer.add(new FeaturedHelperClass(R.drawable.geliboluyarimadasi, "Gelibolu Milli Parkı", "Parkın kapladığı alan 33 bin hektarın üzerindedir. Milli park 1 ilçeyi ve 8 köyü kapsamaktadır."));
+        featuredLocationsTarihiYer.add(new FeaturedHelperClass(R.drawable.kilitbahirkalesi, "Kilitbahir Kalesi", "Yedi katlı, yonca planlı iç kalesidir. Bu plan şeması başka hiçbir kalede kullanılmamıştır. Her katta farklı sayıda hücreleri bulunur."));
+        featuredLocationsTarihiYer.add(new FeaturedHelperClass(R.drawable.seyitonbasianiti, "Seyit Onbaşı Anıtı", "Göstermiş olduğu kahramanlık örneği ile Kurtuluş Savaşı’nın simge isimlerinden biri olmuştur"));
+
+
+        adapter3 = new FeaturedAdapter(featuredLocationsTarihiYer);
+        featuredRecycler3.setAdapter(adapter3);
+
+        /// OTEL VERİLERİ
+        featuredRecycler4.setHasFixedSize(true);
+        featuredRecycler4.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
+
+        ArrayList<FeaturedHelperClass> featuredLocationsOtel = new ArrayList<>();
+
+        featuredLocationsOtel.add(new FeaturedHelperClass(R.drawable.truvaotel4, "Büyük Truva Otel", "Şehir Merkezi 0.6 km uzaklıkta"));
+        featuredLocationsOtel.add(new FeaturedHelperClass(R.drawable.avechotel4, "Avec Hotel", "Şehir Merkezi 4.3 km uzaklıkta"));
+        featuredLocationsOtel.add(new FeaturedHelperClass(R.drawable.anzachotel3, "Hotel Anzac", "Şehir Merkezine 0.6 km uzaklıkta"));
+        featuredLocationsOtel.add(new FeaturedHelperClass(R.drawable.kolinotel5, "Hotel Kolin", "Şehir Merkezi 3.8 km uzaklıkta"));
+        featuredLocationsOtel.add(new FeaturedHelperClass(R.drawable.desetranges3, "Otel Des Etranges", "Şehir Merkezi 0.7 km uzaklıkta"));
+
+        adapter4 = new FeaturedAdapter(featuredLocationsOtel);
+        featuredRecycler4.setAdapter(adapter4);
+
+
+    }
+
+    /*
     private void categoriesRecycler() {
 
         //All Gradients
@@ -80,68 +151,4 @@ public class UserBoard extends AppCompatActivity {
 
     }
 */
-    private void featuredRecycler() {
-
-        featuredRecycler.setHasFixedSize(true);
-        featuredRecycler.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
-
-        ArrayList<FeaturedHelperClass> featuredLocationsMekan = new ArrayList<>();
-
-        featuredLocationsMekan.add(new FeaturedHelperClass(R.drawable.sardalyemekan, "Sardalye", "Ekmek arası sardalya dedin mi adres belli. Yanında acılı turşu suyu ile Çanakkale'ye her yolu düşenin tatması gereken bir lezzet."));
-        featuredLocationsMekan.add(new FeaturedHelperClass(R.drawable.doganpastamekan, "Doğan Pastanesi", "Dondurmaya adini veren, birbirinden güzel pasta ve tatlı çeşitleriyle damağınızda unutulmaz tatlar bırakıyor."));
-        featuredLocationsMekan.add(new FeaturedHelperClass(R.drawable.burgermekan, "Altı Üstü Burger", "Günlük hazırlanan zerdeçallı ekmeği ve köftesiyle şehrin en lezzetli hamburgerleri"));
-        featuredLocationsMekan.add(new FeaturedHelperClass(R.drawable.oncumekan, "Öncü Döner", "Et İskenderden, Tavuk Dönere uzanan çeşitlerle etin en lezzetli versiyonlarının bulunduğu mekan"));
-        featuredLocationsMekan.add(new FeaturedHelperClass(R.drawable.yalovarestoranimekan, "Yalova Restaurant", "Çanakkale'de en iyi balık yapan restoran. Mezeleri , çorbası ve  manzarası ile  her zaman tercih sebebi."));
-        featuredLocationsMekan.add(new FeaturedHelperClass(R.drawable.verandamekan, "Veranda Cafe", "Dünya kahveleri, sandviçler, özel el yapımı cheesecake ve pastalarla hizmetinizde."));
-
-        adapter = new FeaturedAdapter(featuredLocationsMekan);
-        featuredRecycler.setAdapter(adapter);
-
-
-        featuredRecycler2.setHasFixedSize(true);
-        featuredRecycler2.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
-
-        ArrayList<FeaturedHelperClass> featuredLocationsMuze = new ArrayList<>();
-
-        featuredLocationsMuze.add(new FeaturedHelperClass(R.drawable.troyamuzesi, "Troya Müzesi", "Troya antik kentini anlamak ve ören yeri gezisini de anlamlandırmak için mükemmel bir mekan."));
-        featuredLocationsMuze.add(new FeaturedHelperClass(R.drawable.kentmuzesi, "Kent Müzesi", "Şehrin tarihçesi ve sosyal yaşamı anlatılan, bağışlanan eşyaların da sunulduğu müze."));
-        featuredLocationsMuze.add(new FeaturedHelperClass(R.drawable.denizmuzesi, "Deniz Müzesi", "1915 Çanakkale Deniz ve Kara Savaşları hakkında bilgilendirmek için kurulmuş askeri müze."));
-        featuredLocationsMuze.add(new FeaturedHelperClass(R.drawable.rhapdosmozaikmuze, "Rhapdos Mozaik", "Mozaik betimlemeleri üzerinden Troya mitoliji'sinin baştan sona anlatıldığı, Troya harabelerini görmeden önce mutlaka görülmesi gereken bir yer."));
-
-        adapter2 = new FeaturedAdapter(featuredLocationsMuze);
-        featuredRecycler2.setAdapter(adapter2);
-////////////////////////
-        featuredRecycler3.setHasFixedSize(true);
-        featuredRecycler3.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
-
-        ArrayList<FeaturedHelperClass> featuredLocationsTarihiYer = new ArrayList<>();
-
-        featuredLocationsTarihiYer.add(new FeaturedHelperClass(R.drawable.sardalyemekan, "Sardalye", "Ekmek arası sardalya dedin mi adres belli. Yanında acılı turşu suyu ile Çanakkale'ye her yolu düşenin tatması gereken bir lezzet."));
-        featuredLocationsTarihiYer.add(new FeaturedHelperClass(R.drawable.doganpastamekan, "Doğan Pastanesi", "Çanakkale'de Dondurmaya adini veren Doğan Pastanesi, birbirinden güzel pasta ve tatlı çeşitleriyle damağınızda unutulmaz tatlar bırakıyor."));
-        featuredLocationsTarihiYer.add(new FeaturedHelperClass(R.drawable.burgermekan, "Altı Üstü Burger", "Günlük hazırlanan zerdeçallı ekmeği ve köftesiyle şehrin en lezzetli hamburgerleri"));
-        featuredLocationsTarihiYer.add(new FeaturedHelperClass(R.drawable.oncumekan, "Öncü Döner", "Et İskenderden, Tavuk Dönere uzanan çeşitlerle etin en lezzetli versiyonlarının bulunduğu mekan"));
-        featuredLocationsTarihiYer.add(new FeaturedHelperClass(R.drawable.yalovarestoranimekan, "Yalova Restaurant", "Çanakkale'de en iyi balık yapan restoran. Mezeleri , çorbası ve  manzarası ile  her zaman tercih sebebi."));
-        featuredLocationsTarihiYer.add(new FeaturedHelperClass(R.drawable.verandamekan, "Veranda Cafe", "Dünya kahveleri, sandviçler, özel el yapımı cheesecake ve pastalarla hizmetinizde."));
-
-        adapter3 = new FeaturedAdapter(featuredLocationsTarihiYer);
-        featuredRecycler3.setAdapter(adapter3);
-
-        /////////////
-        featuredRecycler4.setHasFixedSize(true);
-        featuredRecycler4.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
-
-        ArrayList<FeaturedHelperClass> featuredLocationsOtel = new ArrayList<>();
-
-        featuredLocationsOtel.add(new FeaturedHelperClass(R.drawable.sardalyemekan, "Sardalye", "Ekmek arası sardalya dedin mi adres belli. Yanında acılı turşu suyu ile Çanakkale'ye her yolu düşenin tatması gereken bir lezzet."));
-        featuredLocationsOtel.add(new FeaturedHelperClass(R.drawable.doganpastamekan, "Doğan Pastanesi", "Çanakkale'de Dondurmaya adini veren Doğan Pastanesi, birbirinden güzel pasta ve tatlı çeşitleriyle damağınızda unutulmaz tatlar bırakıyor."));
-        featuredLocationsOtel.add(new FeaturedHelperClass(R.drawable.burgermekan, "Altı Üstü Burger", "Günlük hazırlanan zerdeçallı ekmeği ve köftesiyle şehrin en lezzetli hamburgerleri"));
-        featuredLocationsOtel.add(new FeaturedHelperClass(R.drawable.oncumekan, "Öncü Döner", "Et İskenderden, Tavuk Dönere uzanan çeşitlerle etin en lezzetli versiyonlarının bulunduğu mekan"));
-        featuredLocationsOtel.add(new FeaturedHelperClass(R.drawable.yalovarestoranimekan, "Yalova Restaurant", "Çanakkale'de en iyi balık yapan restoran. Mezeleri , çorbası ve  manzarası ile  her zaman tercih sebebi."));
-        featuredLocationsOtel.add(new FeaturedHelperClass(R.drawable.verandamekan, "Veranda Cafe", "Dünya kahveleri, sandviçler, özel el yapımı cheesecake ve pastalarla hizmetinizde."));
-
-        adapter4 = new FeaturedAdapter(featuredLocationsOtel);
-        featuredRecycler4.setAdapter(adapter4);
-
-
-    }
 }

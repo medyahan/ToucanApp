@@ -2,63 +2,12 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
 
     tools:context=".Common.SplashScreen">
-
-    <!--    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="40dp"
-        android:layout_marginRight="92dp"
-        android:layout_marginBottom="706.2dp"
-        android:layout_marginTop="65.8dp"
-        android:textColor="#312DA4"
-        android:text="@string/slogan1"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.085" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/poppins_light"
-        android:text="@string/slogan2"
-        android:layout_marginLeft="40dp"
-        android:layout_marginRight="182dp"
-        android:layout_marginBottom="667.7dp"
-        android:layout_marginTop="116.3dp"
-        android:textColor="#707070"
-        android:textSize="10sp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="40dp"
-        tools:layout_editor_absoluteY="123dp" />-->
-
-
-    <!--<TextView
-       android:id="@+id/startekranslogan"
-       android:layout_width="284dp"
-       android:layout_height="16dp"
-       android:fontFamily="@font/poppins_light"
-       android:text="@string/slogan2"
-       android:textColor="@color/white"
-       android:textSize="10sp"
-       app:layout_editor_absoluteX="126dp"
-       app:layout_editor_absoluteY="696dp"
-       app:layout_constraintBottom_toTopOf="@+id/imgView1"
-       app:layout_constraintEnd_toEndOf="@+id/imgView1"
-       app:layout_constraintHorizontal_bias="0.0"
-       app:layout_constraintStart_toStartOf="@+id/imgView1"
-       tools:ignore="MissingConstraints" />-->
 
 
     <ImageView
@@ -66,7 +15,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:contentDescription="@string/todo"
-        android:src="@mipmap/startekrani"
+        android:src="@drawable/startekrani"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="0dp" />
 
