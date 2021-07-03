@@ -1,12 +1,6 @@
 package com.cemre.toucanapp.User;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.view.GravityCompat;
-import androidx.drawerlayout.widget.DrawerLayout;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
+import android.content.Intent;
 import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -15,10 +9,19 @@ import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.cemre.toucanapp.HelperClasses.HomeAdapter.FeaturedAdapter;
 import com.cemre.toucanapp.HelperClasses.HomeAdapter.FeaturedHelperClass;
 import com.cemre.toucanapp.R;
+import com.cemre.toucanapp.Start.StartUp;
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.auth.FirebaseAuth;
 
 import java.util.ArrayList;
 
@@ -61,6 +64,13 @@ public class UserBoard extends AppCompatActivity implements NavigationView.OnNav
 
 
 
+    }
+
+    public void Logout(View view)
+    {
+        FirebaseAuth.getInstance().signOut();
+        startActivity(new Intent(getApplicationContext(), StartUp.class));
+        finish();
     }
 
     private void navigationDrawer(){

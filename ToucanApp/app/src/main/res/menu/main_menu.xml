@@ -60,6 +60,7 @@
                     android:icon="@drawable/cikisyap"
                     android:id="@+id/nav_cikisyap"
                     android:title="@string/cikisyap"
+                    android:onClick="Logout"
                     />
 
             </group>

@@ -18,6 +18,7 @@ import android.widget.TextView;
 import com.cemre.toucanapp.HelperClasses.SliderAdapters;
 import com.cemre.toucanapp.HelperClasses.SliderAdapters;
 import com.cemre.toucanapp.R;
+import com.cemre.toucanapp.Start.StartUp;
 import com.cemre.toucanapp.User.UserBoard;
 import com.cemre.toucanapp.Common.SplashScreen;
 
@@ -54,7 +55,7 @@ public class OnBoarding extends AppCompatActivity {
         }
 
         public void skip(View view) {
-            startActivity(new Intent(this, UserBoard.class));
+            startActivity(new Intent(this, StartUp.class));
             finish();
         }
 

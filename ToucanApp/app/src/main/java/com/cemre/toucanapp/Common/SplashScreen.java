@@ -11,6 +11,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.cemre.toucanapp.R;
+import com.cemre.toucanapp.Start.StartUp;
 import com.cemre.toucanapp.User.UserBoard;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -57,7 +58,7 @@ public class SplashScreen extends AppCompatActivity {
                 startActivity(intent);
                 finish();
             } else {
-                Intent intent = new Intent(getApplicationContext(), UserBoard.class);
+                Intent intent = new Intent(getApplicationContext(), StartUp.class);
                 startActivity(intent);
                 finish();
             }

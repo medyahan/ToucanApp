@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "484276536926",
+    "project_id": "toucanapp-5a706",
+    "storage_bucket": "toucanapp-5a706.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:484276536926:android:14702ff7e183a1929bd6cf",
+        "android_client_info": {
+          "package_name": "com.cemre.toucanapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "484276536926-22u0h7bf06k00g9brrpnhcfm0hqag26m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBOhEgdfYNNCnKnVie04ioHsEG0gI3aeOY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "484276536926-22u0h7bf06k00g9brrpnhcfm0hqag26m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
