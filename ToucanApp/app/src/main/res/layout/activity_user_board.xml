@@ -1,427 +1,482 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".User.UserBoard"
-    android:orientation="vertical">
-
-    <RelativeLayout
+    android:id="@+id/drawer_layout">
+    
+    <com.google.android.material.navigation.NavigationView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="10dp">
+        android:layout_height="match_parent"
+        android:id="@+id/navigation_view"
 
-        <ImageView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_centerVertical="true"
-            android:src="@drawable/list" />
+        android:background="@drawable/dagicon"
+        android:theme="@style/navigationTheme"
+        android:layout_gravity="start"
+        app:menu=""
+        app:headerLayout="">
 
-        <ImageView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_alignParentRight="true"
-            android:padding="5dp"
-            android:src="@drawable/profilicon2" />
+    </com.google.android.material.navigation.NavigationView>
 
-    </RelativeLayout>
 
-    <ScrollView
+    <LinearLayout
+        android:id="@+id/content"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
 
-        <LinearLayout
+
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:padding="10dp">
 
-            <RelativeLayout
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/list" />
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:padding="5dp"
+                android:src="@drawable/ajandaikon" />
+
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_width="match_parent">
+                android:orientation="vertical">
 
-                <TextView
-                    android:id="@+id/app_name"
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_centerHorizontal="true"
-                    android:fontFamily="@font/kalam_bold"
-                    android:inputType="textPhonetic"
-                    android:text="@string/applogo"
-                    android:textColor="@color/colorPrimarySlogan"
-                    android:textSize="28sp" />
+                    android:layout_gravity="center"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_margin="10dp"
+                            android:elevation="8dp">
+
+                            <ImageView
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:layout_centerVertical="true"
+                                android:src="@drawable/yemekbuton" />
+
+                        </RelativeLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_medium"
+                            android:gravity="center_horizontal"
+                            android:text="@string/yemek"
+                            android:textAlignment="center"
+                            android:textSize="11sp" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_margin="10dp"
+                            android:elevation="8dp">
+
+                            <ImageView
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:layout_centerHorizontal="true"
+                                android:src="@drawable/muzebuton" />
+
+                        </RelativeLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_medium"
+                            android:gravity="center_horizontal"
+                            android:text="@string/muze"
+                            android:textAlignment="center"
+                            android:textSize="11sp" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_margin="10dp"
+                            android:elevation="8dp">
+
+                            <ImageView
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:layout_centerInParent="true"
+                                android:src="@drawable/tarihibuton" />
+
+                        </RelativeLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_medium"
+                            android:gravity="center_horizontal"
+                            android:text="@string/tarihiyer"
+                            android:textAlignment="center"
+                            android:textSize="11sp" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_margin="10dp"
+                            android:elevation="8dp">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_centerInParent="true"
+                                android:src="@drawable/otelbuton" />
+
+                        </RelativeLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_medium"
+                            android:gravity="center_horizontal"
+                            android:text="@string/otel"
+                            android:textAlignment="center"
+                            android:textSize="11sp" />
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:layout_below="@id/app_name"
-                    android:layout_marginLeft="40dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginRight="40dp"
-                    android:layout_marginBottom="10dp"
-                    android:background="@color/white"
-                    android:elevation="8dp">
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_below="@id/app_name"
+                        android:layout_marginLeft="40dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="40dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@color/white"
+                        android:elevation="8dp">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="15dp"
+                            android:src="@drawable/searchicon" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="15dp"
+                            android:text="@string/arama" />
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/app_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:fontFamily="@font/kalam_bold"
+                        android:inputType="textPhonetic"
+                        android:text="@string/applogo"
+                        android:textColor="@color/colorPrimarySlogan"
+                        android:textSize="28sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginTop="20dp">
 
                     <ImageView
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
-                        android:layout_alignParentRight="true"
-                        android:layout_centerVertical="true"
-                        android:layout_marginRight="15dp"
-                        android:src="@drawable/searchicon" />
+                        android:layout_width="match_parent"
+                        android:layout_height="280dp"
+                        android:layout_marginRight="220dp"
+                        android:background="@drawable/bgkirmizi"
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerVertical="true"
-                        android:layout_marginLeft="15dp"
-                        android:text="@string/arama" />
+                        />
+
+                    <LinearLayout
+                        android:id="@+id/featured_background"
+                        android:layout_width="170dp"
+                        android:layout_height="280dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="10dp"
+
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="160dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="30dp"
+                            android:fontFamily="@font/poppins_bold"
+                            android:text="@string/yemekbutonslogani"
+                            android:textAllCaps="true"
+                            android:textColor="@color/white"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="160dp"
+                            android:layout_marginLeft="10dp"
+
+                            android:fontFamily="@font/poppins_light"
+                            android:text="@string/yemekbutonsloganidesc"
+                            android:textColor="@color/white"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/featured_recycler"
+                        android:layout_width="match_parent"
+                        android:layout_height="3000dp"
+                        android:layout_toRightOf="@id/featured_background"
+                        android:background="#00000000" />
 
                 </RelativeLayout>
-
-            </RelativeLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:orientation="horizontal">
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <RelativeLayout
-                        android:layout_width="60dp"
-                        android:layout_height="60dp"
-                        android:layout_margin="10dp"
-                        android:elevation="8dp">
-
-                        <ImageView
-                            android:layout_width="60dp"
-                            android:layout_height="60dp"
-                            android:layout_centerInParent="true"
-                            android:src="@drawable/yemekbuton"
-                            />
-
-                    </RelativeLayout>
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/poppins_medium"
-                        android:gravity="center_horizontal"
-                        android:text="@string/yemek"
-                        android:textAlignment="center"
-                        android:textSize="11sp" />
-
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <RelativeLayout
-                        android:layout_width="60dp"
-                        android:layout_height="60dp"
-                        android:layout_margin="10dp"
-                        android:elevation="8dp">
-
-                        <ImageView
-                            android:layout_width="60dp"
-                            android:layout_height="60dp"
-                            android:layout_centerHorizontal="true"
-                            android:src="@drawable/muzebuton" />
-
-                    </RelativeLayout>
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/poppins_medium"
-                        android:gravity="center_horizontal"
-                        android:text="@string/muze"
-                        android:textAlignment="center"
-                        android:textSize="11sp" />
-
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <RelativeLayout
-                        android:layout_width="60dp"
-                        android:layout_height="60dp"
-                        android:layout_margin="10dp"
-                        android:elevation="8dp">
-
-                        <ImageView
-                            android:layout_width="60dp"
-                            android:layout_height="60dp"
-                            android:layout_centerInParent="true"
-                            android:src="@drawable/tarihibuton"
-                            />
-
-                    </RelativeLayout>
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/poppins_medium"
-                        android:gravity="center_horizontal"
-                        android:text="@string/tarihiyer"
-                        android:textAlignment="center"
-                        android:textSize="11sp" />
-
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <RelativeLayout
-                        android:layout_width="60dp"
-                        android:layout_height="60dp"
-                        android:layout_margin="10dp"
-                        android:elevation="8dp">
-
-                        <ImageView
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_centerInParent="true"
-                            android:src="@drawable/otelbuton" />
-
-                    </RelativeLayout>
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/poppins_medium"
-                        android:gravity="center_horizontal"
-                        android:text="@string/otel"
-                        android:textAlignment="center"
-                        android:textSize="11sp" />
-
-
-                </LinearLayout>
-
-
-
-
-
-            </LinearLayout>
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:layout_marginLeft="20dp"
-                android:background="@color/kirmizi">
-
-                <LinearLayout
-                    android:id="@+id/featured_background"
-                    android:layout_width="170dp"
-                    android:layout_height="280dp"
-                    android:background="@drawable/sardalyemekan"
-                    android:layout_margin="10dp"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="160dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginTop="50dp"
-                        android:background="#B0000000"
-                        android:fontFamily="@font/poppins_bold"
-                        android:text="@string/yemekbutonslogani"
-                        android:textAllCaps="true"
-                        android:textColor="@color/grey2"
-                        android:textSize="20sp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_marginLeft="10dp"
-
-                        android:background="#B0000000"
-                        android:fontFamily="@font/poppins_light"
-                        android:text="@string/yemekbutonsloganidesc"
-                        android:textColor="@color/grey2"
-                        android:textSize="8sp" />
-
-                </LinearLayout>
-
-                <androidx.recyclerview.widget.RecyclerView
-                    android:layout_width="match_parent"
-                    android:layout_height="280dp"
-                    android:layout_toRightOf="@id/featured_background"
-                    android:background="@color/white"/>
-
-            </RelativeLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginTop="30dp"
-                android:padding="20dp">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="300dp"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginTop="20dp">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="en çok görüntülenen"
-                        android:textSize="20sp"
-                        android:textColor="@color/black"
-                        android:fontFamily="@font/poppins_medium"
-                        android:textAllCaps="true"/>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="tümünü göster"
-                        android:layout_alignParentRight="true"
-                        android:layout_centerVertical="true"/>
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="280dp"
+                        android:layout_marginRight="220dp"
+                        android:background="@drawable/bgmuzemor"
 
+                        />
 
+                    <LinearLayout
+                        android:id="@+id/featured_background2"
+                        android:layout_width="170dp"
+                        android:layout_height="280dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="10dp"
+
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="160dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="30dp"
+                            android:fontFamily="@font/poppins_bold"
+                            android:text="@string/muzebutonslogani"
+                            android:textAllCaps="true"
+                            android:textColor="@color/white"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="160dp"
+                            android:layout_marginLeft="10dp"
+
+                            android:fontFamily="@font/poppins_light"
+                            android:text="@string/muzebutonsloganidesc"
+                            android:textColor="@color/white"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/featured_recycler2"
+                        android:layout_width="match_parent"
+                        android:layout_height="3000dp"
+                        android:layout_toRightOf="@id/featured_background2"
+                        android:background="#00000000" />
 
                 </RelativeLayout>
-                <androidx.recyclerview.widget.RecyclerView
-                    android:layout_width="match_parent"
-                    android:layout_height="100dp"/>
-
-
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginTop="30dp"
-                android:padding="20dp">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="300dp"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginTop="20dp">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="en çok görüntülenen"
-                        android:textSize="20sp"
-                        android:textColor="@color/black"
-                        android:fontFamily="@font/poppins_medium"
-                        android:textAllCaps="true"/>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="tümünü göster"
-                        android:layout_alignParentRight="true"
-                        android:layout_centerVertical="true"/>
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="280dp"
+                        android:layout_marginRight="220dp"
+                        android:background="@drawable/bgtarihisari"
 
+                        />
 
+                    <LinearLayout
+                        android:id="@+id/featured_background3"
+                        android:layout_width="170dp"
+                        android:layout_height="280dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="10dp"
+
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="160dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="30dp"
+                            android:fontFamily="@font/poppins_bold"
+                            android:text="@string/tarihibutonslogani"
+                            android:textAllCaps="true"
+                            android:textColor="@color/white"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="160dp"
+                            android:layout_marginLeft="10dp"
+
+                            android:fontFamily="@font/poppins_light"
+                            android:text="@string/tarihibutonsloganidesc"
+                            android:textColor="@color/white"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/featured_recycler3"
+                        android:layout_width="match_parent"
+                        android:layout_height="3000dp"
+                        android:layout_toRightOf="@id/featured_background3"
+                        android:background="#00000000" />
 
                 </RelativeLayout>
-                <androidx.recyclerview.widget.RecyclerView
-                    android:layout_width="match_parent"
-                    android:layout_height="100dp"/>
-
-
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginTop="30dp"
-                android:padding="20dp">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="300dp"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginTop="20dp">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="en çok görüntülenen"
-                        android:textSize="20sp"
-                        android:textColor="@color/black"
-                        android:fontFamily="@font/poppins_medium"
-                        android:textAllCaps="true"/>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="tümünü göster"
-                        android:layout_alignParentRight="true"
-                        android:layout_centerVertical="true"/>
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="280dp"
+                        android:layout_marginRight="220dp"
+                        android:background="@drawable/bgotelyesil"
 
+                        />
 
+                    <LinearLayout
+                        android:id="@+id/featured_background4"
+                        android:layout_width="170dp"
+                        android:layout_height="280dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="10dp"
+
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="160dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="30dp"
+                            android:fontFamily="@font/poppins_bold"
+                            android:text="@string/otelbutonslogani"
+                            android:textAllCaps="true"
+                            android:textColor="@color/white"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="160dp"
+                            android:layout_marginLeft="10dp"
+
+                            android:fontFamily="@font/poppins_light"
+                            android:text="@string/otelbutonsloganidesc"
+                            android:textColor="@color/white"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/featured_recycler4"
+                        android:layout_width="match_parent"
+                        android:layout_height="3000dp"
+                        android:layout_toRightOf="@id/featured_background4"
+                        android:background="#00000000" />
 
                 </RelativeLayout>
-                <androidx.recyclerview.widget.RecyclerView
-                    android:layout_width="match_parent"
-                    android:layout_height="100dp"/>
-
 
 
             </LinearLayout>
+        </ScrollView>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginTop="30dp"
-                android:padding="20dp">
+    </LinearLayout>
 
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="en çok görüntülenen"
-                        android:textSize="20sp"
-                        android:textColor="@color/black"
-                        android:fontFamily="@font/poppins_medium"
-                        android:textAllCaps="true"/>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="tümünü göster"
-                        android:layout_alignParentRight="true"
-                        android:layout_centerVertical="true"/>
-
-
-
-                </RelativeLayout>
-                <androidx.recyclerview.widget.RecyclerView
-                    android:layout_width="match_parent"
-                    android:layout_height="100dp"/>
-
-
-
-            </LinearLayout>
-
-
-
-
-        </LinearLayout>
-    </ScrollView>
-
-
-
-  </LinearLayout>
+</androidx.drawerlayout.widget.DrawerLayout>
 
