@@ -1,24 +1,40 @@
 package com.cemre.toucanapp.User;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
+import android.view.MenuItem;
+import android.view.View;
 import android.view.WindowManager;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 
 import com.cemre.toucanapp.HelperClasses.HomeAdapter.FeaturedAdapter;
 import com.cemre.toucanapp.HelperClasses.HomeAdapter.FeaturedHelperClass;
 import com.cemre.toucanapp.R;
+import com.google.android.material.navigation.NavigationView;
 
 import java.util.ArrayList;
 
-public class UserBoard extends AppCompatActivity {
+public class UserBoard extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
+
+    static final float END_SCALE = 0.7f;
 
     RecyclerView featuredRecycler, featuredRecycler2, featuredRecycler3, featuredRecycler4, mostViewedRecycler, categoriesRecycler;
     RecyclerView.Adapter adapter, adapter2, adapter3, adapter4;
     private GradientDrawable gradient1, gradient2, gradient3, gradient4;
+
+
+    DrawerLayout drawerLayout;
+    NavigationView navigationView;
+    ImageView menuIcon;
+    LinearLayout contentView, content;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,13 +47,74 @@ public class UserBoard extends AppCompatActivity {
         featuredRecycler2 = findViewById(R.id.featured_recycler2);
         featuredRecycler3 = findViewById(R.id.featured_recycler3);
         featuredRecycler4 = findViewById(R.id.featured_recycler4);
-        //mostViewedRecycler = findViewById(R.id.most_viewed_recycler);
-        //categoriesRecycler = findViewById(R.id.categories_recycler);
-        //Functions will be executed automatically when this activity will be created
         featuredRecycler();
-        //mostViewedRecycler();
-        //categoriesRecycler();
 
+
+
+        //Menu Hooks
+        drawerLayout = findViewById(R.id.drawer_layout);
+        navigationView = findViewById(R.id.navigation_view);
+        menuIcon = findViewById(R.id.menu_icon);
+        contentView = findViewById(R.id.content);
+
+        navigationDrawer();
+
+
+
+    }
+
+    private void navigationDrawer(){
+
+        //Naviagtion Drawer
+        navigationView.bringToFront();
+        navigationView.setNavigationItemSelectedListener(this);
+        navigationView.setCheckedItem(R.id.nav_home);
+
+        menuIcon.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                if(drawerLayout.isDrawerVisible(GravityCompat.START))
+                    drawerLayout.closeDrawer(GravityCompat.START);
+                else drawerLayout.openDrawer(GravityCompat.START);
+            }
+        });
+
+        animateNavigationDrawer();
+    }
+
+    /////////////////////burada kaldık
+    private void animateNavigationDrawer() {
+
+        drawerLayout.setScrimColor(getResources().getColor(R.color.turuncu));
+        drawerLayout.addDrawerListener(new DrawerLayout.SimpleDrawerListener() {
+            @Override
+            public void onDrawerSlide(View drawerView, float slideOffset) {
+
+                // Scale the View based on current slide offset
+                final float diffScaledOffset = slideOffset * (1 - END_SCALE);
+                final float offsetScale = 1 - diffScaledOffset;
+                contentView.setScaleX(offsetScale);
+                contentView.setScaleY(offsetScale);
+
+                // Translate the View, accounting for the scaled width
+                final float xOffset = drawerView.getWidth() * slideOffset;
+                final float xOffsetDiff = contentView.getWidth() * diffScaledOffset / 2;
+                final float xTranslation = xOffset - xOffsetDiff;
+                contentView.setTranslationX(xTranslation);
+            }
+        });
+    }
+
+    @Override
+    public void onBackPressed() {
+        if (drawerLayout.isDrawerVisible(GravityCompat.START)) {
+            drawerLayout.closeDrawer(GravityCompat.START);
+        } else
+            super.onBackPressed();
+    }
+    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+        return true;
     }
 
     private void featuredRecycler() {
@@ -68,7 +145,7 @@ public class UserBoard extends AppCompatActivity {
         featuredLocationsMuze.add(new FeaturedHelperClass(R.drawable.troyamuzesi, "Troya Müzesi", "Troya antik kentini anlamak ve ören yeri gezisini de anlamlandırmak için mükemmel bir mekan."));
         featuredLocationsMuze.add(new FeaturedHelperClass(R.drawable.kentmuzesi, "Kent Müzesi", "Şehrin tarihçesi ve sosyal yaşamı anlatılan, bağışlanan eşyaların da sunulduğu müze."));
         featuredLocationsMuze.add(new FeaturedHelperClass(R.drawable.denizmuzesi, "Deniz Müzesi", "1915 Çanakkale Deniz ve Kara Savaşları hakkında bilgilendirmek için kurulmuş askeri müze."));
-        featuredLocationsMuze.add(new FeaturedHelperClass(R.drawable.rhapdosmozaikmuze, "Rhapdos Mozaik", "Mozaik betimlemeleri üzerinden Troya mitoliji'sinin baştan sona anlatıldığı, Troya harabelerini görmeden önce mutlaka görülmesi gereken bir yer."));
+        featuredLocationsMuze.add(new FeaturedHelperClass(R.drawable.rhapdosmozaikmuze, "Rhapdos Mozaik", "Mozaikler üzerinden Troya mitoliji'sinin anlatıldığı, Troya harabelerinden önce görülmesi gereken bir yer."));
 
         adapter2 = new FeaturedAdapter(featuredLocationsMuze);
         featuredRecycler2.setAdapter(adapter2);
@@ -79,14 +156,14 @@ public class UserBoard extends AppCompatActivity {
 
         ArrayList<FeaturedHelperClass> featuredLocationsTarihiYer = new ArrayList<>();
 
-        featuredLocationsTarihiYer.add(new FeaturedHelperClass(R.drawable.sehitlikabidesi, "Şehitler Abidesi", "Çanakkale Şehitleri Abidesi, kurtuluş mücadelesini en iyi hissedebileceğiniz, bu ülke uğruna ne kadar büyük fedakarlıklar yapıldığını anlayabileceğiniz en özel yerdir. "));
+        featuredLocationsTarihiYer.add(new FeaturedHelperClass(R.drawable.sehitlikabidesi, "Şehitler Abidesi", "Kurtuluş mücadelesini hissedebileceğiniz, bu ülke uğruna ne kadar büyük fedakarlıklar yapıldığını anlayabileceğiniz en özel yerdir. "));
         featuredLocationsTarihiYer.add(new FeaturedHelperClass(R.drawable.saatkulesi, "Saat Kulesi", "20 metrelik yükseklikte ve 5 katlı olan Çanakkale Saat Kulesi, Çanakkale şehir merkezinde Vitalis G. Sancakbeyi Cemil Paşa tarafından 1896 yılında yaptırılmıştır."));
         featuredLocationsTarihiYer.add(new FeaturedHelperClass(R.drawable.truvaati, "Truva Atı", " Burası, Çanakkale’nin tarihi açıdan en zengin noktaları arasında bulunuyor ve ziyaretçilerin en fazla ilgi gösterdiği noktaların başında geliyor."));
         featuredLocationsTarihiYer.add(new FeaturedHelperClass(R.drawable.aynalicarsi, "Aynalı Çarşı", "Aynalı Çarşı isminin çatıdaki pencerelerden giren ışığı dağıtmak için girişte ve duvar boyunca yerleştirilmiş aynalardan geldiğini düşünülmektedir."));
-        featuredLocationsTarihiYer.add(new FeaturedHelperClass(R.drawable.oncumekan, "Assos Antik Kenti", "Bölgede çıkarılan tarihi eserler arasında Athena Tapınağı burasını en cazip kılan detaylar arasında bulunuyor ve Assos tarihi yerler listesinin ilk sırasında yer almaktadır."));
+        featuredLocationsTarihiYer.add(new FeaturedHelperClass(R.drawable.assosantikkenti, "Assos Antik Kenti", "Bölgede çıkarılan tarihi eserler arasında Athena Tapınağı burasını en cazip kılan detaylar arasında bulunuyor."));
         featuredLocationsTarihiYer.add(new FeaturedHelperClass(R.drawable.geliboluyarimadasi, "Gelibolu Milli Parkı", "Parkın kapladığı alan 33 bin hektarın üzerindedir. Milli park 1 ilçeyi ve 8 köyü kapsamaktadır."));
-        featuredLocationsTarihiYer.add(new FeaturedHelperClass(R.drawable.kilitbahirkalesi, "Kilitbahir Kalesi", "Yedi katlı, yonca planlı iç kalesidir. Bu plan şeması başka hiçbir kalede kullanılmamıştır. Her katta farklı sayıda hücreleri bulunur."));
-        featuredLocationsTarihiYer.add(new FeaturedHelperClass(R.drawable.seyitonbasianiti, "Seyit Onbaşı Anıtı", "Göstermiş olduğu kahramanlık örneği ile Kurtuluş Savaşı’nın simge isimlerinden biri olmuştur"));
+        featuredLocationsTarihiYer.add(new FeaturedHelperClass(R.drawable.kilitbahirkalesi, "Kilitbahir Kalesi", "Yedi katlı, yonca planlı iç kalesidir. Bu plan şeması başka hiçbir kalede kullanılmamıştır."));
+        featuredLocationsTarihiYer.add(new FeaturedHelperClass(R.drawable.seyitonbasianiti, "Seyit Onbaşı Anıtı", "Göstermiş olduğu kahramanlık örneği ile Kurtuluş Savaşı’nın simge isimlerinden biri olmuştur."));
 
 
         adapter3 = new FeaturedAdapter(featuredLocationsTarihiYer);
@@ -98,17 +175,19 @@ public class UserBoard extends AppCompatActivity {
 
         ArrayList<FeaturedHelperClass> featuredLocationsOtel = new ArrayList<>();
 
-        featuredLocationsOtel.add(new FeaturedHelperClass(R.drawable.truvaotel4, "Büyük Truva Otel", "Şehir Merkezi 0.6 km uzaklıkta"));
-        featuredLocationsOtel.add(new FeaturedHelperClass(R.drawable.avechotel4, "Avec Hotel", "Şehir Merkezi 4.3 km uzaklıkta"));
+        featuredLocationsOtel.add(new FeaturedHelperClass(R.drawable.truvaotel4, "Büyük Truva Otel", "Şehir Merkezine 0.6 km uzaklıkta"));
+        featuredLocationsOtel.add(new FeaturedHelperClass(R.drawable.avechotel4, "Avec Hotel", "Şehir Merkezine 4.3 km uzaklıkta"));
         featuredLocationsOtel.add(new FeaturedHelperClass(R.drawable.anzachotel3, "Hotel Anzac", "Şehir Merkezine 0.6 km uzaklıkta"));
-        featuredLocationsOtel.add(new FeaturedHelperClass(R.drawable.kolinotel5, "Hotel Kolin", "Şehir Merkezi 3.8 km uzaklıkta"));
-        featuredLocationsOtel.add(new FeaturedHelperClass(R.drawable.desetranges3, "Otel Des Etranges", "Şehir Merkezi 0.7 km uzaklıkta"));
+        featuredLocationsOtel.add(new FeaturedHelperClass(R.drawable.kolinotel5, "Hotel Kolin", "Şehir Merkezine 3.8 km uzaklıkta"));
+        featuredLocationsOtel.add(new FeaturedHelperClass(R.drawable.desetranges3, "Otel Des Etranges", "Şehir Merkezine 0.7 km uzaklıkta"));
 
         adapter4 = new FeaturedAdapter(featuredLocationsOtel);
         featuredRecycler4.setAdapter(adapter4);
 
 
     }
+
+
 
     /*
     private void categoriesRecycler() {

@@ -32,8 +32,6 @@
         android:drawablePadding="0dp"
         android:onClick="skip"
         android:padding="8dp"
-        android:text="@string/skip_btn"
-        android:textSize="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -49,13 +47,13 @@
         <Button
             android:id="@+id/hadibaslayaslimBtn"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_centerHorizontal="true"
             android:background="@drawable/hadibaslayalim"
-            android:text="@string/hadibaslayalim"
+            android:gravity="center_vertical"
             android:onClick="skip"
-            app:backgroundTint="@null"
-            android:visibility="invisible"
-             />
+            app:backgroundTint="@null" />
 
         <Button
             android:id="@+id/nextBtn"

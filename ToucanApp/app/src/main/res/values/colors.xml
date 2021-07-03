@@ -7,6 +7,7 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="colorPrimaryButton">#F38000</color>
+    <color name="turuncu">#9FF38000</color>
     <color name="colorPrimarySlogan">#312DA4</color>
     <color name="white">#FFFFFF</color>
     <color name="grey">#707070</color>
@@ -19,6 +20,9 @@
     <color name="muzerenk">#B39BDC</color>
     <color name="tarihirenk">#D9E34C</color>
     <color name="otelrenk">#7AE39D</color>
+    <color name="kremsi">#FAE9D7</color>
+    <color name="beyazimsi">#F5F6DE</color>
+    <color name="navheader">#E4DAF4</color>
 
 
 </resources>

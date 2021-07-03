@@ -15,7 +15,6 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.cemre.toucanapp.Common.LoginSignUp.RetailerStartUpScreen;
 import com.cemre.toucanapp.HelperClasses.SliderAdapters;
 import com.cemre.toucanapp.HelperClasses.SliderAdapters;
 import com.cemre.toucanapp.R;
@@ -55,7 +54,7 @@ public class OnBoarding extends AppCompatActivity {
         }
 
         public void skip(View view) {
-            startActivity(new Intent(this, RetailerStartUpScreen.class));
+            startActivity(new Intent(this, UserBoard.class));
             finish();
         }
 

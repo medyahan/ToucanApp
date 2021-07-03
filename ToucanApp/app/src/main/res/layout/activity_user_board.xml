@@ -5,20 +5,21 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".User.UserBoard"
-    android:id="@+id/drawer_layout">
+    android:id="@+id/drawer_layout"
+
+    >
     
     <com.google.android.material.navigation.NavigationView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/navigation_view"
 
-        android:background="@drawable/dagicon"
+        android:background="@color/white"
         android:theme="@style/navigationTheme"
         android:layout_gravity="start"
-        app:menu=""
-        app:headerLayout="">
+        app:menu="@menu/main_menu"
+        app:headerLayout="@layout/menu_header"/>
 
-    </com.google.android.material.navigation.NavigationView>
 
 
     <LinearLayout
@@ -35,6 +36,7 @@
             android:padding="10dp">
 
             <ImageView
+                android:id="@+id/menu_icon"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:layout_centerVertical="true"
@@ -57,6 +59,51 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_below="@id/app_name"
+                        android:layout_marginLeft="40dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="40dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@color/white"
+                        android:elevation="8dp">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="15dp"
+                            android:src="@drawable/searchicon" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="15dp"
+                            android:text="@string/arama" />
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/app_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:fontFamily="@font/kalam_bold"
+                        android:inputType="textPhonetic"
+                        android:text="@string/applogo"
+                        android:textColor="@color/colorPrimarySlogan"
+                        android:textSize="28sp" />
+
+                </RelativeLayout>
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -109,8 +156,8 @@
                             <ImageView
                                 android:layout_width="60dp"
                                 android:layout_height="60dp"
-                                android:layout_centerHorizontal="true"
-                                android:src="@drawable/muzebuton" />
+                                android:layout_centerInParent="true"
+                                android:src="@drawable/tarihibuton" />
 
                         </RelativeLayout>
 
@@ -119,7 +166,7 @@
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/poppins_medium"
                             android:gravity="center_horizontal"
-                            android:text="@string/muze"
+                            android:text="@string/tarihiyer"
                             android:textAlignment="center"
                             android:textSize="11sp" />
 
@@ -140,8 +187,8 @@
                             <ImageView
                                 android:layout_width="60dp"
                                 android:layout_height="60dp"
-                                android:layout_centerInParent="true"
-                                android:src="@drawable/tarihibuton" />
+                                android:layout_centerHorizontal="true"
+                                android:src="@drawable/muzebuton" />
 
                         </RelativeLayout>
 
@@ -150,7 +197,7 @@
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/poppins_medium"
                             android:gravity="center_horizontal"
-                            android:text="@string/tarihiyer"
+                            android:text="@string/muze"
                             android:textAlignment="center"
                             android:textSize="11sp" />
 
@@ -191,54 +238,11 @@
 
                 </LinearLayout>
 
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
 
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="40dp"
-                        android:layout_below="@id/app_name"
-                        android:layout_marginLeft="40dp"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginRight="40dp"
-                        android:layout_marginBottom="10dp"
-                        android:background="@color/white"
-                        android:elevation="8dp">
-
-                        <ImageView
-                            android:layout_width="30dp"
-                            android:layout_height="30dp"
-                            android:layout_alignParentRight="true"
-                            android:layout_centerVertical="true"
-                            android:layout_marginRight="15dp"
-                            android:src="@drawable/searchicon" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_centerVertical="true"
-                            android:layout_marginLeft="15dp"
-                            android:text="@string/arama" />
-
-                    </RelativeLayout>
-
-                    <TextView
-                        android:id="@+id/app_name"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerHorizontal="true"
-                        android:fontFamily="@font/kalam_bold"
-                        android:inputType="textPhonetic"
-                        android:text="@string/applogo"
-                        android:textColor="@color/colorPrimarySlogan"
-                        android:textSize="28sp" />
-
-                </RelativeLayout>
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="300dp"
+                    android:layout_height="320dp"
                     android:layout_marginLeft="0dp"
                     android:layout_marginTop="20dp">
 
@@ -276,7 +280,7 @@
 
                         <TextView
                             android:layout_width="wrap_content"
-                            android:layout_height="160dp"
+                            android:layout_height="190dp"
                             android:layout_marginLeft="10dp"
 
                             android:fontFamily="@font/poppins_light"
@@ -297,66 +301,7 @@
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="300dp"
-                    android:layout_marginLeft="0dp"
-                    android:layout_marginTop="20dp">
-
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="280dp"
-                        android:layout_marginRight="220dp"
-                        android:background="@drawable/bgmuzemor"
-
-                        />
-
-                    <LinearLayout
-                        android:id="@+id/featured_background2"
-                        android:layout_width="170dp"
-                        android:layout_height="280dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginLeft="0dp"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginEnd="10dp"
-                        android:layout_marginRight="10dp"
-                        android:layout_marginBottom="10dp"
-
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:layout_width="160dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginTop="30dp"
-                            android:fontFamily="@font/poppins_bold"
-                            android:text="@string/muzebutonslogani"
-                            android:textAllCaps="true"
-                            android:textColor="@color/white"
-                            android:textSize="20sp" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="160dp"
-                            android:layout_marginLeft="10dp"
-
-                            android:fontFamily="@font/poppins_light"
-                            android:text="@string/muzebutonsloganidesc"
-                            android:textColor="@color/white"
-                            android:textSize="12sp" />
-
-                    </LinearLayout>
-
-                    <androidx.recyclerview.widget.RecyclerView
-                        android:id="@+id/featured_recycler2"
-                        android:layout_width="match_parent"
-                        android:layout_height="3000dp"
-                        android:layout_toRightOf="@id/featured_background2"
-                        android:background="#00000000" />
-
-                </RelativeLayout>
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="300dp"
+                    android:layout_height="320dp"
                     android:layout_marginLeft="0dp"
                     android:layout_marginTop="20dp">
 
@@ -394,7 +339,7 @@
 
                         <TextView
                             android:layout_width="wrap_content"
-                            android:layout_height="160dp"
+                            android:layout_height="190dp"
                             android:layout_marginLeft="10dp"
 
                             android:fontFamily="@font/poppins_light"
@@ -415,7 +360,66 @@
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="300dp"
+                    android:layout_height="320dp"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginTop="20dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="280dp"
+                        android:layout_marginRight="220dp"
+                        android:background="@drawable/bgmuzemor"
+
+                        />
+
+                    <LinearLayout
+                        android:id="@+id/featured_background2"
+                        android:layout_width="170dp"
+                        android:layout_height="280dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="10dp"
+
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="160dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="30dp"
+                            android:fontFamily="@font/poppins_bold"
+                            android:text="@string/muzebutonslogani"
+                            android:textAllCaps="true"
+                            android:textColor="@color/white"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="190dp"
+                            android:layout_marginLeft="10dp"
+
+                            android:fontFamily="@font/poppins_light"
+                            android:text="@string/muzebutonsloganidesc"
+                            android:textColor="@color/white"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/featured_recycler2"
+                        android:layout_width="match_parent"
+                        android:layout_height="3000dp"
+                        android:layout_toRightOf="@id/featured_background2"
+                        android:background="#00000000" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="320dp"
                     android:layout_marginLeft="0dp"
                     android:layout_marginTop="20dp">
 
@@ -453,7 +457,7 @@
 
                         <TextView
                             android:layout_width="wrap_content"
-                            android:layout_height="160dp"
+                            android:layout_height="190dp"
                             android:layout_marginLeft="10dp"
 
                             android:fontFamily="@font/poppins_light"
@@ -480,3 +484,4 @@
 
 </androidx.drawerlayout.widget.DrawerLayout>
 
+<!-- en üstten android:layout_gravity="start" çıkarttım.-->

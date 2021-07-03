@@ -1,15 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <group
-        android:checkableBehavior="single">
+    <group android:checkableBehavior="single">
 
         <item
             android:id="@+id/nav_home"
             android:title="@string/anasayfa"
-            android:icon="">
-        </item>
+            android:icon="@drawable/homepageicon"/>
+
+        <item
+            android:icon="@drawable/aramaicon"
+            android:id="@+id/nav_search"
+            android:title="@string/search" />
+
+        <item
+            android:icon="@drawable/ajandaiconn"
+            android:id="@+id/nav_ajanda"
+            android:title="@string/ajanda" />
 
     </group>
+
+    <item android:title="Kategoriler">
+        <menu>
+
+            <group android:checkableBehavior="single">
+
+                <item
+                    android:id="@+id/nav_mekan"
+                    android:title="@string/yemek"
+                    android:icon="@drawable/yemekicon"/>
+
+                <item
+                    android:icon="@drawable/muzeicon"
+                    android:id="@+id/nav_muze"
+                    android:title="@string/muze" />
+
+                <item
+                    android:icon="@drawable/tarihiicon"
+                    android:id="@+id/nav_tarihiyer"
+                    android:title="@string/tarihiyer" />
+
+                <item
+                    android:icon="@drawable/otelicon"
+                    android:id="@+id/nav_otel"
+                    android:title="@string/otel" />
+
+            </group>
+
+        </menu>
+
+    </item>
+
+    <item android:title="Profil">
+        <menu>
+
+            <group android:checkableBehavior="single">
+
+                <item
+                    android:icon="@drawable/cikisyap"
+                    android:id="@+id/nav_cikisyap"
+                    android:title="@string/cikisyap"
+                    />
+
+            </group>
+
+        </menu>
+
+    </item>
+
+
+
 
 </menu>

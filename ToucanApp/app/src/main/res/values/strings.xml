@@ -36,14 +36,14 @@ yer keşfetme imkanına sahip ol.</string>
     <string name="tarihibutonsloganidesc">"    Çanakkale’nin tarihi 5.000 yıl öncesine kadar yani MÖ 3000’li yıllara kadar uzanmaktadır. Bu tarihe bir adımda sen at. Hadi gezgin! tarihe koşalım.   "</string>
     <string name="otelbutonslogani">DİNLENMEYE NE DERSİN?</string>
     <string name="otelbutonsloganidesc">"    Dinlenmeyi en çok sen hakettin. Yeni yerler keşfetmek seni asla yoramaz. Hadi gezgin! en güzel otelleri burada bulabilirsin.   "</string>
+
     <string name="ajanda">"AJANDA"</string>
-
     <string name="anasayfa">"Anasayfa"</string>
+    <string name="search">"Bul"</string>
+    <string name="cikisyap">"ÇIKIŞ YAP"</string>
 
-    <!-- Login Register Screen -->
-    <string name="name">Ad</string>
-    <string name="mail">Email</string>
-    <string name="sifre">Şifre</string>
+
+
 
     <string-array name="canakkale_gezilecek_yerler">
         <item>Çanakkale Şehitliği ve Şehitler Anıtı</item>
