@@ -31,7 +31,10 @@ yer keşfetme imkanına sahip ol.</string>
     <string name="yemekbutonslogani">SENİN İÇİN EN İYİ MEKANLAR</string>
     <string name="yemekbutonsloganidesc">"   Senin için en iyi yemekleri, kendine bir mola vermek istediğinde bir bardak kahve içmek için en iyi kafeleri seçtik. Tüm bu mekanlar senin için en iyi yorumlara, yıldızlara bakarak sıralandı. Hadi gezgin! bir küçük molayı, acıktıysan en iyi yemekleri hakettin.   "</string>
 
-
+    <!-- Login Register Screen -->
+    <string name="name">Ad</string>
+    <string name="mail">Email</string>
+    <string name="sifre">Şifre</string>
 
     <string-array name="canakkale_gezilecek_yerler">
         <item>Çanakkale Şehitliği ve Şehitler Anıtı</item>

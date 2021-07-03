@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Common.LoginSignUp.RetailerStartUpScreen"
+    android:background="@drawable/girisbackground"
+    android:layout_marginTop="80dp"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="550dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/girisbutonu_start"
+            android:layout_width="320dp"
+            app:backgroundTint="@null"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:background="@drawable/startgirisbutonu"
+            android:onClick="CallSignUpScreen"/>
+
+        <Button
+            android:id="@+id/kayitolbutonu_start"
+            android:layout_width="320dp"
+            app:backgroundTint="@null"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/startkayitolbutonu"
+            android:onClick="CallLoginScreen"/>
+
+    </LinearLayout>
+
+
+
+
+</ScrollView>

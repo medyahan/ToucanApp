@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "761388143929",
+    "firebase_url": "https://medya-6e932.firebaseio.com",
+    "project_id": "medya-6e932",
+    "storage_bucket": "medya-6e932.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:761388143929:android:99eed68f4e00928040c4e8",
+        "android_client_info": {
+          "package_name": "com.cemre.toucanapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "761388143929-cvp75gn77t07uut4t5lgsornoq0p76a6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDH4mzkgtDhxXi_OqoRVW4UKQhRRdXOMzQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "761388143929-cvp75gn77t07uut4t5lgsornoq0p76a6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
