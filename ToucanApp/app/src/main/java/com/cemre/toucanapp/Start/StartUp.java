@@ -20,13 +20,12 @@ public class StartUp extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_start_up);
 
-        // düzenlenecek
-        /*
+
         if(FirebaseAuth.getInstance().getCurrentUser() != null)
         {
             startActivity(new Intent(getApplicationContext(), UserBoard.class));
             finish();
-        }*/
+        }
 
     }
 

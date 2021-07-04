@@ -14,6 +14,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "484276536926-7rvov2ogphrhnd8ud2m1nckh79ktg1eo.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.cemre.toucanapp",
+            "certificate_hash": "c31c0d76ff38a3653e6f1c4d7161ff37f13d34cd"
+          }
+        },
+        {
           "client_id": "484276536926-22u0h7bf06k00g9brrpnhcfm0hqag26m.apps.googleusercontent.com",
           "client_type": 3
         }

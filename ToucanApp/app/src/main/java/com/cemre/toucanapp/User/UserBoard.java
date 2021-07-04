@@ -18,6 +18,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.cemre.toucanapp.HelperClasses.HomeAdapter.FeaturedAdapter;
 import com.cemre.toucanapp.HelperClasses.HomeAdapter.FeaturedHelperClass;
+import com.cemre.toucanapp.Location.Ajanda_Haritalar;
 import com.cemre.toucanapp.R;
 import com.cemre.toucanapp.Start.StartUp;
 import com.google.android.material.navigation.NavigationView;
@@ -25,9 +26,10 @@ import com.google.firebase.auth.FirebaseAuth;
 
 import java.util.ArrayList;
 
-public class UserBoard extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
+public class UserBoard extends AppCompatActivity {
 
-    static final float END_SCALE = 0.7f;
+    //implements NavigationView.OnNavigationItemSelectedListener
+    //static final float END_SCALE = 0.7f;
 
     RecyclerView featuredRecycler, featuredRecycler2, featuredRecycler3, featuredRecycler4, mostViewedRecycler, categoriesRecycler;
     RecyclerView.Adapter adapter, adapter2, adapter3, adapter4;
@@ -53,7 +55,7 @@ public class UserBoard extends AppCompatActivity implements NavigationView.OnNav
         featuredRecycler();
 
 
-
+/*
         //Menu Hooks
         drawerLayout = findViewById(R.id.drawer_layout);
         navigationView = findViewById(R.id.navigation_view);
@@ -61,9 +63,13 @@ public class UserBoard extends AppCompatActivity implements NavigationView.OnNav
         contentView = findViewById(R.id.content);
 
         navigationDrawer();
+*/
 
+    }
 
-
+    public void click(View view) {
+        startActivity(new Intent(this, Ajanda_Haritalar.class));
+        finish();
     }
 
     public void Logout(View view)
@@ -73,6 +79,7 @@ public class UserBoard extends AppCompatActivity implements NavigationView.OnNav
         finish();
     }
 
+    /*
     private void navigationDrawer(){
 
         //Naviagtion Drawer
@@ -126,7 +133,7 @@ public class UserBoard extends AppCompatActivity implements NavigationView.OnNav
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         return true;
     }
-
+*/
     private void featuredRecycler() {
 
 
@@ -199,45 +206,6 @@ public class UserBoard extends AppCompatActivity implements NavigationView.OnNav
 
 
 
-    /*
-    private void categoriesRecycler() {
-
-        //All Gradients
-        gradient2 = new GradientDrawable(GradientDrawable.Orientation.LEFT_RIGHT, new int[]{0xffd4cbe5, 0xffd4cbe5});
-        gradient1 = new GradientDrawable(GradientDrawable.Orientation.LEFT_RIGHT, new int[]{0xff7adccf, 0xff7adccf});
-        gradient3 = new GradientDrawable(GradientDrawable.Orientation.LEFT_RIGHT, new int[]{0xfff7c59f, 0xFFf7c59f});
-        gradient4 = new GradientDrawable(GradientDrawable.Orientation.LEFT_RIGHT, new int[]{0xffb8d7f5, 0xffb8d7f5});
 
 
-        ArrayList<CategoriesHelperClass> categoriesHelperClasses = new ArrayList<>();
-        categoriesHelperClasses.add(new CategoriesHelperClass(gradient1, R.drawable.school_image, "Education"));
-        categoriesHelperClasses.add(new CategoriesHelperClass(gradient2, R.drawable.hospital_image, "HOSPITAL"));
-        categoriesHelperClasses.add(new CategoriesHelperClass(gradient3, R.drawable.restaurant_image, "Restaurant"));
-        categoriesHelperClasses.add(new CategoriesHelperClass(gradient4, R.drawable.shopping_image, "Shopping"));
-        categoriesHelperClasses.add(new CategoriesHelperClass(gradient1, R.drawable.transport_image, "Transport"));
-
-
-        categoriesRecycler.setHasFixedSize(true);
-        adapter = new CategoriesAdapter(categoriesHelperClasses);
-        categoriesRecycler.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
-        categoriesRecycler.setAdapter(adapter);
-
-    }
-
-    private void mostViewedRecycler() {
-
-        mostViewedRecycler.setHasFixedSize(true);
-        mostViewedRecycler.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
-
-        ArrayList<MostViewedHelperClass> mostViewedLocations = new ArrayList<>();
-        mostViewedLocations.add(new MostViewedHelperClass(R.drawable.mcdonald_img, "McDonald's"));
-        mostViewedLocations.add(new MostViewedHelperClass(R.drawable.city_2, "Edenrobe"));
-        mostViewedLocations.add(new MostViewedHelperClass(R.drawable.city_1, "J."));
-        mostViewedLocations.add(new MostViewedHelperClass(R.drawable.mcdonald_img, "Walmart"));
-
-        adapter = new MostViewedAdpater(mostViewedLocations);
-        mostViewedRecycler.setAdapter(adapter);
-
-    }
-*/
 }

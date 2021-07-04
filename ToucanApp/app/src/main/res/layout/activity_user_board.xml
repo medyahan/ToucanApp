@@ -9,16 +9,7 @@
 
     >
     
-    <com.google.android.material.navigation.NavigationView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/navigation_view"
 
-        android:background="@color/white"
-        android:theme="@style/navigationTheme"
-        android:layout_gravity="start"
-        app:menu="@menu/main_menu"
-        app:headerLayout="@layout/menu_header"/>
 
 
 
@@ -43,11 +34,22 @@
                 android:src="@drawable/list" />
 
             <ImageView
+                android:id="@+id/cikisyap"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="180dp"
+                android:onClick="Logout"
+                android:padding="5dp"
+                android:src="@drawable/cikisyap" />
+
+
+            <ImageView
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:layout_alignParentRight="true"
                 android:padding="5dp"
-                android:src="@drawable/ajandaikon" />
+                android:onClick="click"
+                android:src="@drawable/harita2" />
 
         </RelativeLayout>
 
@@ -81,14 +83,17 @@
                             android:layout_alignParentRight="true"
                             android:layout_centerVertical="true"
                             android:layout_marginRight="15dp"
-                            android:src="@drawable/searchicon" />
+                            android:src="@drawable/searchicon"
+                            />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_centerVertical="true"
                             android:layout_marginLeft="15dp"
-                            android:text="@string/arama" />
+                            android:text="@string/arama"
+                            android:inputType="textPhonetic"
+                            />
 
                     </RelativeLayout>
 
@@ -98,7 +103,6 @@
                         android:layout_height="wrap_content"
                         android:layout_centerHorizontal="true"
                         android:fontFamily="@font/kalam_bold"
-                        android:inputType="textPhonetic"
                         android:text="@string/applogo"
                         android:textColor="@color/colorPrimarySlogan"
                         android:textSize="28sp" />
@@ -270,7 +274,8 @@
                         <TextView
                             android:layout_width="160dp"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="10dp"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginLeft="5dp"
                             android:layout_marginTop="30dp"
                             android:fontFamily="@font/poppins_bold"
                             android:text="@string/yemekbutonslogani"
@@ -281,8 +286,9 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="190dp"
-                            android:layout_marginLeft="10dp"
+                            android:layout_marginStart="5dp"
 
+                            android:layout_marginLeft="5dp"
                             android:fontFamily="@font/poppins_light"
                             android:text="@string/yemekbutonsloganidesc"
                             android:textColor="@color/white"
@@ -329,7 +335,8 @@
                         <TextView
                             android:layout_width="160dp"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="10dp"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginLeft="5dp"
                             android:layout_marginTop="30dp"
                             android:fontFamily="@font/poppins_bold"
                             android:text="@string/tarihibutonslogani"
@@ -340,8 +347,9 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="190dp"
-                            android:layout_marginLeft="10dp"
+                            android:layout_marginStart="5dp"
 
+                            android:layout_marginLeft="5dp"
                             android:fontFamily="@font/poppins_light"
                             android:text="@string/tarihibutonsloganidesc"
                             android:textColor="@color/white"
@@ -388,7 +396,8 @@
                         <TextView
                             android:layout_width="160dp"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="10dp"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginLeft="5dp"
                             android:layout_marginTop="30dp"
                             android:fontFamily="@font/poppins_bold"
                             android:text="@string/muzebutonslogani"
@@ -399,8 +408,9 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="190dp"
-                            android:layout_marginLeft="10dp"
+                            android:layout_marginStart="5dp"
 
+                            android:layout_marginLeft="5dp"
                             android:fontFamily="@font/poppins_light"
                             android:text="@string/muzebutonsloganidesc"
                             android:textColor="@color/white"

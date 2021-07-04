@@ -72,7 +72,7 @@ public class OnBoarding extends AppCompatActivity {
             for (int i = 0; i < dots.length; i++) {
                 dots[i] = new TextView(this);
                 dots[i].setText(Html.fromHtml("•"));
-                dots[i].setTextSize(35);
+                dots[i].setTextSize(60);
 
                 dotsLayout.addView(dots[i]);
             }

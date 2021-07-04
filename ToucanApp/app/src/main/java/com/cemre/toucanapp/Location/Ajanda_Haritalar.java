@@ -6,12 +6,11 @@ import android.os.Bundle;
 
 import com.cemre.toucanapp.R;
 
-public class MapBook extends AppCompatActivity {
-
+public class Ajanda_Haritalar extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_map_book);
+        setContentView(R.layout.activity_ajanda__haritalar);
     }
 }

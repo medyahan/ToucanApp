@@ -21,6 +21,7 @@ public class SplashScreen extends AppCompatActivity {
     private static int SPLASH_TIMER = 3000;
 
 
+
     ImageView imgView1;
     TextView startekranslogan;
 
@@ -46,21 +47,26 @@ public class SplashScreen extends AppCompatActivity {
 
         new Handler().postDelayed(() -> {
             onBoaringScreen = getSharedPreferences("onBoaringScreen", MODE_PRIVATE);
-            boolean isFirstTime = onBoaringScreen.getBoolean("firsTime", true);
+
+            boolean isFirstTime = onBoaringScreen.getBoolean("isFirsTime", true);
+
 
             if (isFirstTime) {
 
+
                 SharedPreferences.Editor editor = onBoaringScreen.edit();
-                editor.putBoolean("firstTime", false);
+                editor.putBoolean("isFirstTime", false);
                 editor.commit();
+
 
                 Intent intent = new Intent(getApplicationContext(), OnBoarding.class);
                 startActivity(intent);
                 finish();
             } else {
-                Intent intent = new Intent(getApplicationContext(), StartUp.class);
+                Intent intent = new Intent(getApplicationContext(), UserBoard.class);
                 startActivity(intent);
                 finish();
+
             }
 
 

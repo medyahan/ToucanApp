@@ -1,13 +1,10 @@
 package com.cemre.toucanapp.Start;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
-        import android.content.Intent;
-        import android.os.Bundle;
+import android.content.Intent;
+import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
-        import android.view.WindowManager;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -18,6 +15,9 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
 public class Login extends AppCompatActivity {
     EditText mEmail, mPassword;
@@ -32,6 +32,7 @@ public class Login extends AppCompatActivity {
         setContentView(R.layout.activity_login);
 
         mEmail = findViewById(R.id.email_giris);
+        mPassword = findViewById(R.id.sifre_giris);
         mLoginBtn = findViewById(R.id.girisbutonu_giris);
         fAuth = FirebaseAuth.getInstance();
 
@@ -64,6 +65,7 @@ public class Login extends AppCompatActivity {
                         {
                             Toast.makeText(Login.this, "Giriş başarılı!", Toast.LENGTH_SHORT).show();
                             startActivity(new Intent(getApplicationContext(), UserBoard.class));
+
                         }
                         else
                         {

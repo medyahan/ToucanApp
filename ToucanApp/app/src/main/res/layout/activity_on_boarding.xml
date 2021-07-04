@@ -53,6 +53,7 @@
             android:background="@drawable/hadibaslayalim"
             android:gravity="center_vertical"
             android:onClick="skip"
+            android:visibility="invisible"
             app:backgroundTint="@null" />
 
         <Button
