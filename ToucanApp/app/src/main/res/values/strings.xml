@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">TouCanApp</string>
     <string name="appname">TouCan</string>
+    <string name="google_map_api_key">AIzaSyDQcmH2TSRw_8Z5gQ1_iMtjV3v4UCEj_Cg</string>
 
     <string name="slogan1">Yeni Şeyler Keşfet</string>
     <string name="slogan2">“Gezgin, bir yere varmak için değil,
@@ -21,7 +22,7 @@ yer keşfetme imkanına sahip ol.</string>
     <string name="title_activity_maps">Map</string>
 
     <!-- UserBoard -->
-    <string name="applogo">Gezmeye Ne Dersin?</string>
+    <string name="applogo">toucan</string>
     <string name="arama">Arama...</string>
     <string name="yemek">Yeme - İçme</string>
     <string name="tarihiyer">Tarihi Yer</string>
@@ -41,6 +42,7 @@ yer keşfetme imkanına sahip ol.</string>
     <string name="anasayfa">"Anasayfa"</string>
     <string name="search">"Bul"</string>
     <string name="cikisyap">"ÇIKIŞ YAP"</string>
+    <string name="ajandayerekle">"Ajandaya Ekle"</string>
 
 
     <string-array name="canakkale_gezilecek_yerler">

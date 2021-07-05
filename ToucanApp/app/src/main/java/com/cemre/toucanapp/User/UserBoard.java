@@ -1,26 +1,30 @@
 package com.cemre.toucanapp.User;
 
+import android.app.Dialog;
 import android.content.Intent;
 import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
-import android.view.MenuItem;
+import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.cemre.toucanapp.HelperClasses.HomeAdapter.FeaturedAdapter;
 import com.cemre.toucanapp.HelperClasses.HomeAdapter.FeaturedHelperClass;
-import com.cemre.toucanapp.Location.Ajanda_Haritalar;
+import com.cemre.toucanapp.Location.Map;
 import com.cemre.toucanapp.R;
+import com.cemre.toucanapp.Start.Login;
 import com.cemre.toucanapp.Start.StartUp;
+import com.google.android.gms.common.ConnectionResult;
+import com.google.android.gms.common.GoogleApiAvailability;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 
@@ -28,6 +32,8 @@ import java.util.ArrayList;
 
 public class UserBoard extends AppCompatActivity {
 
+    private static final String TAG = "Userboard";
+    private static final int ERROR_DIALOG_REQUEST = 9001;
     //implements NavigationView.OnNavigationItemSelectedListener
     //static final float END_SCALE = 0.7f;
 
@@ -47,6 +53,11 @@ public class UserBoard extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_user_board);
 
+        if(isServicesOK())
+        {
+            init();
+        }
+
         //Hooks
         featuredRecycler = findViewById(R.id.featured_recycler);
         featuredRecycler2 = findViewById(R.id.featured_recycler2);
@@ -64,17 +75,55 @@ public class UserBoard extends AppCompatActivity {
 
         navigationDrawer();
 */
+    }
+
+    // MAPS -------------------------------------------------------------------------------------------//
+    private void init()
+    {
+        Button btnMap = (Button) findViewById(R.id.btnMap);
+        btnMap.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(UserBoard.this, Map.class);
+                startActivity(intent);
+            }
+        });
 
     }
 
+    public boolean isServicesOK()
+    {
+        Log.d(TAG, "isServicesOK: checking google services version..");
+        int available = GoogleApiAvailability.getInstance().isGooglePlayServicesAvailable(UserBoard.this);
+        if(available == ConnectionResult.SUCCESS)
+        {
+            Log.d(TAG, "isServicesOK: Google Play Services is working..");
+            return  true;
+        }
+        else if(GoogleApiAvailability.getInstance().isUserResolvableError(available))
+        {
+            Log.d(TAG, "isServicesOK: an error occured but we can fix it..");
+            Dialog dialog = GoogleApiAvailability.getInstance().getErrorDialog(UserBoard.this, available, ERROR_DIALOG_REQUEST);
+            dialog.show();
+        }
+        else{
+            Toast.makeText(this, "You can't make map request", Toast.LENGTH_SHORT).show();
+        }
+        return false;
+    }
+    // ---------------------------------------------------------------------------------------------------------------
+
+    /*
     public void click(View view) {
-        startActivity(new Intent(this, Ajanda_Haritalar.class));
+
+        startActivity(new Intent(this, .class));
         finish();
-    }
+    }*/
 
     public void Logout(View view)
     {
         FirebaseAuth.getInstance().signOut();
+        Toast.makeText(UserBoard.this, "Çıkış yapıldı..", Toast.LENGTH_SHORT).show();
         startActivity(new Intent(getApplicationContext(), StartUp.class));
         finish();
     }
@@ -203,6 +252,8 @@ public class UserBoard extends AppCompatActivity {
 
 
     }
+
+
 
 
 

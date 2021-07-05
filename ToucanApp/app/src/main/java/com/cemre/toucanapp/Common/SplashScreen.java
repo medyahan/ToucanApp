@@ -42,7 +42,7 @@ public class SplashScreen extends AppCompatActivity {
         side_animasyon = AnimationUtils.loadAnimation(this, R.anim.side_animasyon);
         bottom_animasyon = AnimationUtils.loadAnimation(this, R.anim.bottom_animasyon);
 
-        imgView1.setAnimation(side_animasyon);
+       imgView1.setAnimation(side_animasyon);
         startekranslogan.setAnimation(bottom_animasyon);
 
         new Handler().postDelayed(() -> {
