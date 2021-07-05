@@ -51,25 +51,4 @@
 
     </item>
 
-    <item android:title="Profil">
-        <menu>
-
-            <group android:checkableBehavior="single">
-
-                <item
-                    android:icon="@drawable/cikisyap"
-                    android:id="@+id/nav_cikisyap"
-                    android:title="@string/cikisyap"
-                    android:onClick="Logout"
-                    />
-
-            </group>
-
-        </menu>
-
-    </item>
-
-
-
-
 </menu>

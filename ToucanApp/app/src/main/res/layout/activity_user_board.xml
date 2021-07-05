@@ -7,6 +7,17 @@
     tools:context=".User.UserBoard"
     android:id="@+id/drawer_layout">
 
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/navigation_view"
+
+        android:background="@color/white"
+        android:theme="@style/navigationTheme"
+        android:layout_gravity="start"
+        app:menu="@menu/main_menu"
+        app:headerLayout="@layout/menu_header"/>
+
     <LinearLayout
         android:id="@+id/content"
         android:layout_width="match_parent"
@@ -19,13 +30,16 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="10dp">
-            <!--
+
             <ImageView
                 android:id="@+id/menu_icon"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:layout_centerVertical="true"
-                android:src="@drawable/list" />-->
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="42dp"
+                android:padding="1dp"
+                android:src="@drawable/list" />
 
             <ImageView
                 android:id="@+id/cikisyap"
@@ -33,7 +47,7 @@
                 android:layout_height="40dp"
                 android:onClick="Logout"
                 android:padding="1dp"
-                android:layout_marginLeft="20dp"
+                android:layout_marginLeft="80dp"
                 android:layout_marginTop="20dp"
                 android:layout_alignParentLeft="true"
                 android:src="@drawable/cikisyap" />

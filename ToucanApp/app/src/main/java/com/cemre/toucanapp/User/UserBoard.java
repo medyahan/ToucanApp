@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
@@ -12,7 +13,9 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -30,17 +33,14 @@ import com.google.firebase.auth.FirebaseAuth;
 
 import java.util.ArrayList;
 
-public class UserBoard extends AppCompatActivity {
+public class UserBoard extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     private static final String TAG = "Userboard";
     private static final int ERROR_DIALOG_REQUEST = 9001;
-    //implements NavigationView.OnNavigationItemSelectedListener
-    //static final float END_SCALE = 0.7f;
+    static final float END_SCALE = 0.7f;
 
     RecyclerView featuredRecycler, featuredRecycler2, featuredRecycler3, featuredRecycler4, mostViewedRecycler, categoriesRecycler;
     RecyclerView.Adapter adapter, adapter2, adapter3, adapter4;
-    private GradientDrawable gradient1, gradient2, gradient3, gradient4;
-
 
     DrawerLayout drawerLayout;
     NavigationView navigationView;
@@ -66,7 +66,7 @@ public class UserBoard extends AppCompatActivity {
         featuredRecycler();
 
 
-/*
+
         //Menu Hooks
         drawerLayout = findViewById(R.id.drawer_layout);
         navigationView = findViewById(R.id.navigation_view);
@@ -74,7 +74,7 @@ public class UserBoard extends AppCompatActivity {
         contentView = findViewById(R.id.content);
 
         navigationDrawer();
-*/
+
     }
 
     // MAPS -------------------------------------------------------------------------------------------//
@@ -111,14 +111,7 @@ public class UserBoard extends AppCompatActivity {
         }
         return false;
     }
-    // ---------------------------------------------------------------------------------------------------------------
-
-    /*
-    public void click(View view) {
-
-        startActivity(new Intent(this, .class));
-        finish();
-    }*/
+    // ---------------------------------------------------------------------------------------------------------------  //
 
     public void Logout(View view)
     {
@@ -128,12 +121,12 @@ public class UserBoard extends AppCompatActivity {
         finish();
     }
 
-    /*
+
     private void navigationDrawer(){
 
         //Naviagtion Drawer
         navigationView.bringToFront();
-        navigationView.setNavigationItemSelectedListener(this);
+        navigationView.setNavigationItemSelectedListener(this );
         navigationView.setCheckedItem(R.id.nav_home);
 
         menuIcon.setOnClickListener(new View.OnClickListener(){
@@ -147,8 +140,6 @@ public class UserBoard extends AppCompatActivity {
 
         animateNavigationDrawer();
     }
-
-    /////////////////////burada kaldık
     private void animateNavigationDrawer() {
 
         drawerLayout.setScrimColor(getResources().getColor(R.color.turuncu));
@@ -182,7 +173,7 @@ public class UserBoard extends AppCompatActivity {
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         return true;
     }
-*/
+
     private void featuredRecycler() {
 
 
@@ -252,11 +243,4 @@ public class UserBoard extends AppCompatActivity {
 
 
     }
-
-
-
-
-
-
-
 }
